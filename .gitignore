@@ -1,0 +1,11 @@
+php.ini
+download/*
+system/*
+config.php
+.htaccess.txt
+image/cache/*
+image/data/*
+.htaccess
+vqmod/vqcache/*
+vqmod/vqmod.log
+system/cache/*

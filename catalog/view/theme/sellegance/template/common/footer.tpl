@@ -1,7 +1,7 @@
 		</section> <!-- #content_wrapper -->
 
-		<footer id="footer" class="container">
-
+		<footer id="footer">
+			<div class="container">
 			<div class="row">
 
 				<div class="column span2">
@@ -87,11 +87,11 @@
 				</div>
 
 			</div> <!-- .row -->
-
+			</div>
 		</footer> <!-- #footer -->
 
-		<footer id="footend" class="container">
-
+		<footer id="footend">
+			<div class="container">
 			<div class="row">
 
 			<?php if($this->config->get('sellegance_status')== 1) { ?>
@@ -106,7 +106,7 @@
 			<?php } ?>
 
 			</div>
-
+			</div>
 		</footer> <!-- #footend -->
 
 

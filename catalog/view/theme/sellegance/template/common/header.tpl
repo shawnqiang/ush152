@@ -277,38 +277,32 @@
 
 <body>
 
-	<header id="header" class="container">
+	<header id="header"> 
+		<div class="container">
+		<!-- <div class="row sudheader"> -->
+			
+			<!-- <div id="wrapselector">
+					<?php echo $language; ?>
+	  				<?php echo $currency; ?>
+			</div> -->
 
+			
+			<!-- <div id="links" class="hidden-phone" style="display:inline;">
+				<a href="<?php echo $shopping_cart; ?>"><?php echo $text_shopping_cart; ?></a>
+				<a href="<?php echo $checkout; ?>"><?php echo $text_checkout; ?></a>
+				<a href="<?php echo $account; ?>"><?php echo $text_account; ?></a>
+			</div> -->	
+				
+		<!-- </div> -->
 		<div class="row">
 
-			<div id="logo" class="span4 offset4">
+			<div id="logo" class="span3">
 				<?php if ($logo) { ?>
 					<a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a>
 				<?php } ?>
 			</div> <!-- #logo -->
 
-			<div class="span4 leftbox">
-
-				<div id="welcome">
-					<?php if (!$logged) { ?>
-					<?php echo $text_welcome; ?>
-					<?php } else { ?>
-					<?php echo $text_logged; ?>
-					<?php } ?>
-				</div>
-
-				<div id="links" class="hidden-phone">
-					<a href="<?php echo $shopping_cart; ?>"><?php echo $text_shopping_cart; ?></a>
-					<a href="<?php echo $checkout; ?>"><?php echo $text_checkout; ?></a>
-					<a href="<?php echo $account; ?>"><?php echo $text_account; ?></a>
-				</div>
-
-			</div> <!-- .leftbox -->
-
-
-			<div class="span4 rightbox">
-				
-				<?php echo $cart; ?>
+			<div class="span3 searchwrapper">
 
 				<div id="search">
 					<div class="searchbox input-append">
@@ -317,10 +311,31 @@
 					</div>
 				</div>
 
-				<div id="wrapselector">
-					<?php echo $language; ?>
-	  				<?php echo $currency; ?>
+				
+
+			</div> <!-- .leftbox -->
+
+
+			<div class="span6 accountwrapper">
+				<div id="accontinfo">
+					<div id="welcome">
+						<?php if (!$logged) { ?>
+						<?php echo $text_welcome; ?>
+						<?php } else { ?>
+						<?php echo $text_logged; ?>
+						<?php } ?>
+
+						
+					</div>
 				</div>
+				<?php echo $cart; ?>
+				
+
+				
+
+				
+
+				
 
 			</div> <!-- .rightbox -->
 
@@ -364,7 +379,7 @@
 		</nav><!-- #navbar -->
 
 	<?php } ?>
-
+	</div>
 </header> <!-- #header -->
 
 <div id="topdivider" class="container"></div>

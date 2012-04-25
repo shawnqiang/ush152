@@ -1,0 +1,147 @@
+/*
+Usweethome custom styles.
+Theme Name: usweethome
+Version: 1.0
+Description: Responsive and clean template for OpenCart
+Theme URI: http://www.everthemes.com/
+Author: Shawn qiang
+Tags: usweethome, opencart, everthemes
+*/
+
+/* ---------------------------------------------------------------------- */
+/*	General Styles
+/* ---------------------------------------------------------------------- */
+body{
+	font-family:Georgia,serifd;
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Layout
+/* ---------------------------------------------------------------------- */
+	/*	Main container with shadows
+	-------------------------------------------------- */
+
+		#content-wrapper { 
+			border:none;
+		}
+	/* thick black line below main menu */ 
+
+		#topdivider { 
+			display: none;
+		} 
+
+/* ---------------------------------------------------------------------- */
+/*	Header
+/* ---------------------------------------------------------------------- */
+
+#header{
+	position: relative; 
+	z-index: 99999; 
+	margin-bottom: 10px;
+	background-color: rgba(250, 250, 250, 1);
+	
+	background-image:url(../images/ush-bgs/header_bg.png);
+	background-repeat:repeat-x;
+	background-position:left bottom;
+}
+	#header .container{
+		width:960px;
+	}
+	
+	#header .searchwrapper{
+		margin-left:30px;
+	}
+	#header .accountwrapper{
+		position: relative;
+		margin-left:30px;
+	}
+
+	#logo{
+		padding-top:14px;
+	}
+
+	/*	Welcome & Important Links
+	-------------------------------------------------- */
+
+	#welcome{
+		margin-top:28px;
+	}
+
+	/*	Search box
+	-------------------------------------------------- */
+
+	#search{
+		margin-top:20px;
+	}
+
+	/*	Mini Cart (module on the header)
+	-------------------------------------------------- */
+	#cart{
+		top:16px;
+	}
+
+	#cart h4{
+		display: inline;
+	}
+
+	#cart .heading{
+		margin:0;
+		top:0;
+		height:auto;
+	}
+
+	
+	/*	Main Navigation
+	-------------------------------------------------- */
+
+	#mainnav{
+		margin-top:10px;
+		background-color:#d21241;
+	}
+	#mainnav .nav > li > a{
+		font-size:14px;
+		padding:6px 9px;
+		line-height:18px;
+		color:#fff;
+		text-transform:uppercase;
+		border:1px solid #d21241;
+		border-bottom:none;
+	}
+
+	#mainnav .nav > li > a:hover, #mainnav .nav > li > a.active{
+		background-color:#fff;
+		color:#333;
+		border-style:solid;
+		border-width:1px;
+		border-color:rgba(0, 0, 0, 0.2);
+		border-bottom:none;
+	}
+
+	#mainnav .dropdown-menu{
+		border-radius:0;
+		border-top:none;
+	}
+
+	#mainnav .dropdown-menu li > a:hover, #mainnav .dropdown-menu .active > a, #mainnav .dropdown-menu .active > a:hover{
+		color:#d21241;
+		background-color:#fff;
+	}
+/* ---------------------------------------------------------------------- */
+/*	Footer
+/* ---------------------------------------------------------------------- */
+	#footer{
+		border-top:6px solid #f2f1ef;
+		background-color:#f9f7f3;
+		padding: 10px;
+	}
+
+	#footend{
+		background-color:#f9f7f3;
+		margin-top:0px;
+		border-top:none;
+	}
+
+		#footend .container{
+			border-top:1px solid #f2f1ef;
+			padding-top:10px; 
+		}

@@ -184,6 +184,19 @@ $(document).ready(function(){
 		width:'100%'
 	});
 
+	/* ---------------------------------------------------------------------- */
+	/*	Mainnav - show submenu
+	/* ---------------------------------------------------------------------- */
+
+	$('#mainnav .dropdown').each(function(){
+		var ush_targetlink = $(this).children('a:first-child');
+		$(this).hover(function(){
+			ush_targetlink.addClass('active');
+		},function(){
+			ush_targetlink.removeClass('active');
+		});
+	});
+
 });
 
 	/* ---------------------------------------------------------------------- */
@@ -400,3 +413,5 @@ $(document).ready(function(){
 				}
 			});
 		}
+
+	
