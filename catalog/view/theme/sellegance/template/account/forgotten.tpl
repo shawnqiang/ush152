@@ -8,9 +8,9 @@
 		<?php } ?>
 	</div>
 	
-	 <header class="heading">
+	<header>
 		
-		<h1><?php echo $heading_title; ?></h1>
+		
 		<?php if ($error_warning) { ?>
 			<div class="alert warning"><?php echo $error_warning; ?></div>
 		<?php } ?>
@@ -29,7 +29,7 @@
 		<?php echo $column_left; ?>
 
 		<section id="maincontent" class="<?php echo $main; ?>" role="main">
-
+			<h3><?php echo $heading_title; ?></h3>
 			<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="forgotten" class="form-horizontal">
 
 				<p><?php echo $text_email; ?></p>

@@ -11,9 +11,9 @@
 		<?php } ?>
 	</div>
 	
-	<header class="heading">
+	<header>
 		
-		<h1><?php echo $heading_title; ?></h1>
+		<!-- <h1><?php echo $heading_title; ?></h1> -->
 
 		<?php if ($success) { ?>
 			<div class="alert success"><?php echo $success; ?><a class="close" data-dismiss="alert" href="#">&times;</a></div>
@@ -27,25 +27,7 @@
 
 	<section id="maincontent" class="row">
 
-		<div class="span5 offset1">
-		
-			<div class="contentset center">
-				<h4 class="inner">
-					<span><?php echo $text_new_customer; ?></span>
-				</h4>
-			</div>
-
-			<p><b><?php echo $text_register; ?></b></p>
-
-			<p><?php echo $text_register_account; ?></p>
-			
-			<div class="buttons">
-				<a href="<?php echo $register; ?>" class="btn btn-inverse"><span><?php echo $button_continue; ?></span></a>
-			</div>
-		
-		</div>
-
-		<div class="span5">
+		<div class="span6">
 
 			<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="login" class="form-horizontal">
 				
@@ -71,7 +53,7 @@
 					</div>
 				</div>
 
-				<p><i class="icon-exclamation-sign"></i> <a href="<?php echo $forgotten; ?>"><?php echo $text_forgotten; ?></a></p>
+				<p class="forgotten_tip"><i class="icon-exclamation-sign"></i> <a href="<?php echo $forgotten; ?>"><?php echo $text_forgotten; ?></a></p>
 
 				<div class="buttons">
 					<input type="submit" value="<?php echo $button_login; ?>" class="btn btn-inverse" />
@@ -84,6 +66,26 @@
 			</form>
 		
 		</div>
+
+		<div class="span6">
+		
+			<div class="contentset center">
+				<h4 class="inner">
+					<span><?php echo $text_new_customer; ?></span>
+				</h4>
+			</div>
+
+			<p><b><?php echo $text_register; ?></b></p>
+
+			<p><?php echo $text_register_account; ?></p>
+			
+			<div class="buttons">
+				<a href="<?php echo $register; ?>" class="btn btn-inverse"><span><?php echo $button_continue; ?></span></a>
+			</div>
+		
+		</div>
+
+		
 
 	</section><!-- #maincontent -->
 
