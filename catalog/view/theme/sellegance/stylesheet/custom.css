@@ -176,18 +176,19 @@ body{
 	-------------------------------------------------- */
 
 		.box { 
-			margin-bottom: 20px;
+			margin-bottom: 18px;
 			border:1px solid #efefef;
 	 	}
 
 			.box .box-heading {
-				padding: 8px 10px 7px 4px;
+				padding: 10px 10px 10px 4px;
 				font-size: 14px;
 				font-weight: bold;
 				text-transform:uppercase;
 				background-color: #f7f7f7;
 				line-height: 14px;
 				color: #333;
+
 			}
 
 	/*	Category boxes
@@ -198,6 +199,19 @@ body{
 			padding:0 5px;
 		}
 
+
+
+/* -------------------------------------------------- */
+/*	Mods Styles
+/* -------------------------------------------------- */
+	.category-mod .box-category > ul > li{
+		padding:7px 0;
+		border-bottom:1px solid #f7f7f7;
+	}
+
+	.category-mod .box-heading{
+		margin-bottom:0px;
+	}
 
 
 /* -------------------------------------------------- */
@@ -288,6 +302,7 @@ body{
 			#maincontent.span12 .flexslider {
 				margin-left: 0;
 				width: 940px;
+
 			}
 
 			#footer ul.content { display: block !important; }

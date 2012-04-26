@@ -1,11 +1,10 @@
 <section id="featured-products" class="box">
 
-	<div class="contentset center">
-		<h4 class="inner">
-			<span><?php echo $heading_title; ?></span>
+	<div class="box-heading">
+		<h4>
+			<?php echo $heading_title; ?>
 		</h4>
 	</div>
-
 	<div class="box-content">
 
 		<div class="box-product row-fluid">
@@ -56,11 +55,11 @@
 					</div>
 					<?php } ?>
 
-					<div class="cart">
+					<!-- <div class="cart">
 						<a onclick="addToCart('<?php echo $product['product_id']; ?>');" class="btn btn-cart btn-small">
 							<?php echo $button_cart; ?>
 						</a>
-					</div>
+					</div> -->
 
 				</div>
 
