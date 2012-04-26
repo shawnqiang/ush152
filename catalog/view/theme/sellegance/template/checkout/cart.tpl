@@ -2,22 +2,18 @@
 
 	<?php echo $content_top; ?>
 
-	<div class="breadcrumb">
+	<!-- <div class="breadcrumb">
 		<?php foreach ($breadcrumbs as $breadcrumb) { ?>
 			<?php echo $breadcrumb['separator']; ?>
 			<a href="<?php echo $breadcrumb['href']; ?>">
 				<?php echo $breadcrumb['text']; ?>
 			</a>
 		<?php } ?>
-	</div>
+	</div> -->
 
-	<header class="heading">
+	<header>
 	
-		<h1><?php echo $heading_title; ?>
-			<?php if ($weight) { ?>
-			<span class="weight">(<?php echo $weight; ?>)</span>
-			<?php } ?>
-		</h1>
+		
 
 		<?php if ($attention) { ?>
 			<div class="alert attention"><?php echo $attention; ?><a class="close" data-dismiss="alert" href="#">&times;</a></div>
@@ -33,122 +29,134 @@
 
 	<div class="row">
 
-		<section id="cart-info" class="span10 offset1">
+		<section id="cart-info" class="span12">
 
-			<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="cart-contents">
-
-				<div class="row-fluid headings">
-					<div class="span2"><?php echo $column_image; ?></div>
-					<div class="span3 align-left"><?php echo $column_name; ?></div>
-					<div class="span2 align-left"><?php echo $column_model; ?></div>
-					<div class="span2 align-left"><?php echo $column_quantity; ?></div>
-					<div class="span1"><?php echo $column_price; ?></div>
-					<div class="span2"><?php echo $column_total; ?></div>
+			<div class="mod">
+				<div class="mod-hd">
+					<h3><?php echo $heading_title; ?>
+						<?php if ($weight) { ?>
+						<span class="weight"> (<?php echo $weight; ?>)</span>
+						<?php } ?>
+					</h3>
 				</div>
+				<div class="mod-bd">
+					<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="cart-contents">
 
-				
-				<?php foreach ($products as $product) { ?>
-					
-					<div class="row-fluid">
-
-						<div class="span2 image">
-							<?php if ($product['thumb']) { ?>
-								<a href="<?php echo $product['href']; ?>">
-									<img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" />
-								</a>
-							<?php } else { ?>
-								&nbsp;
-							<?php  } ?>
+						<div class="row-fluid headings">
+							<div class="span2"><?php echo $column_image; ?></div>
+							<div class="span3 align-left"><?php echo $column_name; ?></div>
+							<div class="span2 align-left"><?php echo $column_model; ?></div>
+							<div class="span2 align-left"><?php echo $column_quantity; ?></div>
+							<div class="span1"><?php echo $column_price; ?></div>
+							<div class="span2"><?php echo $column_total; ?></div>
 						</div>
 
-						<div class="span3 name">
+						
+						<?php foreach ($products as $product) { ?>
 							
-							<a href="<?php echo $product['href']; ?>">
-								<b><?php echo $product['name']; ?></b>
-							</a>
-							
-							<?php if (!$product['stock']) { ?>
-								<span class="stock">***</span>
-							<?php } ?>
+							<div class="row-fluid">
 
-							<div>
-								<?php foreach ($product['option'] as $option) { ?>
-								- <small><?php echo $option['name']; ?>: <?php echo $option['value']; ?></small><br />
-								<?php } ?>
+								<div class="span2 image">
+									<?php if ($product['thumb']) { ?>
+										<a href="<?php echo $product['href']; ?>">
+											<img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" />
+										</a>
+									<?php } else { ?>
+										&nbsp;
+									<?php  } ?>
+								</div>
+
+								<div class="span3 name">
+									
+									<a href="<?php echo $product['href']; ?>">
+										<b><?php echo $product['name']; ?></b>
+									</a>
+									
+									<?php if (!$product['stock']) { ?>
+										<span class="stock">***</span>
+									<?php } ?>
+
+									<div>
+										<?php foreach ($product['option'] as $option) { ?>
+										- <small><?php echo $option['name']; ?>: <?php echo $option['value']; ?></small><br />
+										<?php } ?>
+									</div>
+
+									<?php if ($product['reward']) { ?>
+
+									<small><?php echo $product['reward']; ?></small>
+
+									<?php } ?>
+								</div>
+
+								<div class="span2 model">
+									<span class="tag"><?php echo $column_model; ?>:</span>
+									<?php echo $product['model']; ?>
+
+								</div>
+
+								<div class="span2 quantity">
+
+									<input type="text" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" class="span1" />
+									&nbsp;
+									<input type="image" src="catalog/view/theme/sellegance/images/update.png" alt="<?php echo $button_update; ?>" title="<?php echo $button_update; ?>" />
+
+									<a href="<?php echo $product['remove']; ?>" title="<?php echo $button_remove; ?>"><img src="catalog/view/theme/sellegance/images/remove.png" alt="<?php echo $button_remove; ?>" title="<?php echo $button_remove; ?>" /></a>
+
+								</div>
+
+								<div class="span1 price">
+									<span class="tag"><?php echo $column_price; ?>:</span>
+									<?php echo $product['price']; ?>
+								</div>
+
+								<div class="span2 total">
+									<span class="tag"><?php echo $column_total; ?>:</span>
+									<b><?php echo $product['total']; ?></b>
+								</div>
+
 							</div>
 
-							<?php if ($product['reward']) { ?>
+						<?php } ?>
 
-							<small><?php echo $product['reward']; ?></small>
+						<?php foreach ($vouchers as $vouchers) { ?>
 
-							<?php } ?>
-						</div>
+							<div class="row-fluid">
 
-						<div class="span2 model">
-							<span class="tag"><?php echo $column_model; ?>:</span>
-							<?php echo $product['model']; ?>
+								<div class="span2 image">&nbsp;</div>
 
-						</div>
+								<div class="span3 name">
+									<b><?php echo $vouchers['description']; ?></b>
+								</div>
 
-						<div class="span2 quantity">
+								<div class="span2 model">&nbsp;</div>
 
-							<input type="text" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" class="span1" />
-							&nbsp;
-							<input type="image" src="catalog/view/theme/sellegance/images/update.png" alt="<?php echo $button_update; ?>" title="<?php echo $button_update; ?>" />
+								<div class="span2 quantity">
 
-							<a href="<?php echo $product['remove']; ?>" title="<?php echo $button_remove; ?>"><img src="catalog/view/theme/sellegance/images/remove.png" alt="<?php echo $button_remove; ?>" title="<?php echo $button_remove; ?>" /></a>
+									<input type="text" name="" value="1" class="span1" />
+									&nbsp;
+									<a href="<?php echo $vouchers['remove']; ?>" title="<?php echo $button_remove; ?>"><img src="catalog/view/theme/sellegance/images/remove.png" alt="<?php echo $button_remove; ?>" title="<?php echo $button_remove; ?>" /></a>
 
-						</div>
+								</div>
 
-						<div class="span1 price">
-							<span class="tag"><?php echo $column_price; ?>:</span>
-							<?php echo $product['price']; ?>
-						</div>
+								<div class="span1 price">
+									<span class="tag"><?php echo $column_price; ?>:</span>
+									<?php echo $vouchers['amount']; ?>
+								</div>
 
-						<div class="span2 total">
-							<span class="tag"><?php echo $column_total; ?>:</span>
-							<b><?php echo $product['total']; ?></b>
-						</div>
+								<div class="span2 total">
+									<span class="tag"><?php echo $column_total; ?>:</span>
+									<b><?php echo $vouchers['amount']; ?></b>
+								</div>
 
-					</div>
+							</div>
 
-				<?php } ?>
+						<?php } ?>
 
-				<?php foreach ($vouchers as $vouchers) { ?>
-
-					<div class="row-fluid">
-
-						<div class="span2 image">&nbsp;</div>
-
-						<div class="span3 name">
-							<b><?php echo $vouchers['description']; ?></b>
-						</div>
-
-						<div class="span2 model">&nbsp;</div>
-
-						<div class="span2 quantity">
-
-							<input type="text" name="" value="1" class="span1" />
-							&nbsp;
-							<a href="<?php echo $vouchers['remove']; ?>" title="<?php echo $button_remove; ?>"><img src="catalog/view/theme/sellegance/images/remove.png" alt="<?php echo $button_remove; ?>" title="<?php echo $button_remove; ?>" /></a>
-
-						</div>
-
-						<div class="span1 price">
-							<span class="tag"><?php echo $column_price; ?>:</span>
-							<?php echo $vouchers['amount']; ?>
-						</div>
-
-						<div class="span2 total">
-							<span class="tag"><?php echo $column_total; ?>:</span>
-							<b><?php echo $vouchers['amount']; ?></b>
-						</div>
-
-					</div>
-
-				<?php } ?>
-
-			</form>
+					</form>
+				</div>
+			</div>
+			
 
 		</section>
 
@@ -156,17 +164,18 @@
 
 	<div class="row">
 		
-		<section id="coupon-rewards" class="span5 offset1">
+		<section id="coupon-rewards" class="span6">
 
 			<?php if ($coupon_status || $voucher_status || $reward_status || $shipping_status) { ?>
-
-				<div class="contentset center" id="review-title">
-					<h4 class="inner">
+			<div class="mod">
+				<div class="mod-hd">
+					<h4>
 						<span><?php echo $text_next; ?></span>
 					</h4>
-				</div>
 
-				<div class="content">
+				</div>
+				<div class="mod-bd">
+					<div class="content">
 					<p><?php echo $text_next_choice; ?></p>
 					<ul class="radio">
 						<?php if ($coupon_status) { ?>
@@ -259,7 +268,12 @@
 
 					</div>
 
+				</div>	
 				</div>
+			</div>
+				
+
+				
 
 			<?php } else { ?>
 
@@ -269,7 +283,7 @@
 
 		</section>
 
-		<section id="total-cart" class="span4 offset1">
+		<section id="total-cart" class="span6">
 
 			<table id="total">
 				<?php foreach ($totals as $total) { ?>
@@ -281,7 +295,7 @@
 			</table>
 			<div class="buttons">
 				<a href="<?php echo $checkout; ?>" id="checkout" class="btn btn-cart btn-large float-right"><?php echo $button_checkout; ?></a>
-				<a href="<?php echo $continue; ?>" id="continue-shopping" class="btn"><i class="icon-arrow-left"></i> <?php echo $button_shopping; ?></a>
+				<!-- <a href="<?php echo $continue; ?>" id="continue-shopping" class="btn"><i class="icon-arrow-left"></i> <?php echo $button_shopping; ?></a> -->
 			</div>
 
 		</section>

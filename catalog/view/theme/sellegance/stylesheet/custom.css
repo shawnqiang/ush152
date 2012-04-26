@@ -37,7 +37,26 @@ body{
 			padding: 0 0;
 		}
 
-		
+/* -------------------------------------------------- */
+/*	Mod style
+/* -------------------------------------------------- */
+	.widgetbox, .mod{
+		border:1px solid #ddd;
+
+	}
+
+	.widgetbox-hd, .mod-hd{
+		padding: 10px;
+		background-color:#ddd;
+	}
+		.widgetbox-hd p, .mod-hd p{
+			margin-bottom:0;
+		}
+	.widgetbox-bd, .mod-bd{
+		padding:10px;
+	}
+
+
 
 /* ---------------------------------------------------------------------- */
 /*	Header
@@ -171,24 +190,31 @@ body{
 
 
 /* -------------------------------------------------- */
-/*	Login Page
+/*	Shopping Cart
 /* -------------------------------------------------- */
-	.widgetbox{
-		border:1px solid #ddd;
+	#cart-info { 
+		margin-top:0; 
+		margin-bottom: 18px; 
+	}	
 
+	#cart-info .mod{
+		margin:0 -10px;
 	}
 
-	.widgetbox-hd{
-		padding: 10px;
-		background-color:#ddd;
+	#cart-info .mod-bd{
+		padding:0;
 	}
-		.widgetbox-hd p{
-			margin-bottom:0;
+
+		#cart-contents .row-fluid + .row-fluid {
+			border-bottom: none;
+			border-top: 1px solid #eee;
+			padding: 12px 0;
+			margin:0;
 		}
-	.widgetbox-bd{
-		padding:10px;
-	}
 
+	#coupon-rewards .mod{
+		margin-left:-10px;
+	}
 	
 /* ---------------------------------------------------------------------- */
 /*	Footer
