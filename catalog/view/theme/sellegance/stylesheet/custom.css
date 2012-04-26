@@ -56,13 +56,13 @@ body{
 /*	Mod style
 /* -------------------------------------------------- */
 	.widgetbox, .mod{
-		border:1px solid #ddd;
+		border:1px solid #efefef;
 
 	}
 
 	.widgetbox-hd, .mod-hd{
 		padding: 10px;
-		background-color:#ddd;
+		background-color:#f7f7f7;
 	}
 		.widgetbox-hd p, .mod-hd p{
 			margin-bottom:0;
@@ -176,7 +176,7 @@ body{
 
 		.box { 
 			margin-bottom: 20px;
-			border:1px solid #ddd;
+			border:1px solid #efefef;
 	 	}
 
 			.box .box-heading {
@@ -184,7 +184,7 @@ body{
 				font-size: 14px;
 				font-weight: bold;
 				text-transform:uppercase;
-				background-color: #ddd;
+				background-color: #f7f7f7;
 				line-height: 14px;
 				color: #333;
 			}
