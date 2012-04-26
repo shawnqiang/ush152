@@ -88,15 +88,11 @@ body{
 	background-position:left bottom;
 }
 	#header .container{
-		width:960px;
+		width:940px;
 	}
 	
-	#header .searchwrapper{
-		margin-left:30px;
-	}
 	#header .accountwrapper{
 		position: relative;
-		margin-left:30px;
 	}
 
 	#logo{
@@ -143,7 +139,7 @@ body{
 	}
 	#mainnav .nav > li > a{
 		font-size:14px;
-		padding:6px 9px;
+		padding:6px 6px;
 		line-height:18px;
 		color:#fff;
 		text-transform:uppercase;
@@ -191,7 +187,6 @@ body{
 				background-color: #ddd;
 				line-height: 14px;
 				color: #333;
-				margin-bottom:6px;
 			}
 
 	/*	Category boxes
@@ -199,7 +194,7 @@ body{
 
 		.box-category { 
 			margin-top: 0; 
-			padding:0 5px 10px;
+			padding:0 5px;
 		}
 
 
@@ -240,10 +235,6 @@ body{
 		margin-bottom: 18px; 
 	}	
 
-	#cart-info .mod{
-		margin:0 -10px;
-	}
-
 	#cart-info .mod-bd{
 		padding:0;
 	}
@@ -255,15 +246,10 @@ body{
 			margin:0;
 		}
 
-	#coupon-rewards .mod{
-		margin-left:-10px;
-	}
 /* -------------------------------------------------- */
 /*	Checkout
 /* -------------------------------------------------- */
-	#checkout-mod{
-		margin:0 -10px;
-	}
+
 
 /* ---------------------------------------------------------------------- */
 /*	Footer
@@ -284,3 +270,25 @@ body{
 			border-top:1px solid #f2f1ef;
 			padding-top:10px; 
 		}
+
+/* ---------------------------------------------------------------------- */
+/*	Media Queries
+/* ---------------------------------------------------------------------- */
+
+	/* Desktop standard 960 and up */
+	@media only screen and (min-width: 980px) {
+
+		/* -------------------------------------------------- */
+		/*	Header
+		/* -------------------------------------------------- */
+
+			.leftbox {margin-left:-620px;}
+
+			#maincontent.span12 .flexslider {
+				margin-left: 0;
+				width: 940px;
+			}
+
+			#footer ul.content { display: block !important; }
+
+	}
