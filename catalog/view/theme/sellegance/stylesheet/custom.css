@@ -169,6 +169,29 @@ body{
 		margin-left:160px;
 	}
 
+
+/* -------------------------------------------------- */
+/*	Login Page
+/* -------------------------------------------------- */
+	.widgetbox{
+		border:1px solid #ddd;
+
+	}
+
+	.widgetbox-hd{
+		padding: 10px;
+		background-color:#ddd;
+	}
+		.widgetbox-hd p{
+			margin-bottom:0;
+		}
+	.widgetbox-bd{
+		padding:10px;
+	}
+
+	.signupwrapper .widgetbox{
+		margin:0 0 0 -10px;
+	}
 /* ---------------------------------------------------------------------- */
 /*	Footer
 /* ---------------------------------------------------------------------- */

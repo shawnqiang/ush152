@@ -2,18 +2,18 @@
 
 	<?php echo $content_top; ?>
 
-	<div class="breadcrumb">
+	<!-- <div class="breadcrumb">
 		<?php foreach ($breadcrumbs as $breadcrumb) { ?>
 			<?php echo $breadcrumb['separator']; ?>
 			<a href="<?php echo $breadcrumb['href']; ?>">
 				<?php echo $breadcrumb['text']; ?>
 			</a>
 		<?php } ?>
-	</div>
+	</div> -->
 	
-	 <header class="heading">
+	 <header>
 		
-		<h1><?php echo $heading_title; ?></h1>
+		<!-- <h1><?php echo $heading_title; ?></h1> -->
 
 		<?php if ($error_warning) { ?>
 			<div class="alert warning"><?php echo $error_warning; ?></div>
@@ -30,17 +30,18 @@
 
 	<div class="row">
 
-		<?php echo $column_left; ?>
-
-		<section id="maincontent" class="<?php echo $main; ?>" role="main">
-		
-			<p><?php echo $text_account_already; ?></p>
-
+	
+		<section id="maincontent" class="span9 signupwrapper" role="main">
+			<div class="widgetbox">
+			<div class="widgetbox-hd">
+				<h4><?php echo $heading_title; ?></h4>
+			</div>
+			<div class="widgetbox-bd">
 			<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="register-form" class="form-horizontal">
 
 				<fieldset class="subheading">
 
-					<legend><?php echo $text_your_details; ?></legend>
+					<legend class="hide"><?php echo $text_your_details; ?></legend>
 
 					<div class="control-group">
 						<label class="control-label" for="firstname">
@@ -90,18 +91,42 @@
 						</div>
 					</div>
 
-					<div class="control-group">
+					<!-- <div class="control-group">
 						<label class="control-label" for="fax"><?php echo $entry_fax; ?></label>
 						<div class="controls">
 							<input type="text" name="fax" id="fax" value="<?php echo $fax; ?>" class="span3" />
+						</div>
+					</div> -->
+
+					<div class="control-group">
+						<label class="control-label" for="password">
+							<span class="req_mark">*</span> <?php echo $entry_password; ?>
+						</label>
+						<div class="controls">
+							<input type="password" name="password" id="password" value="<?php echo $password; ?>" title="<?php echo $this->language->get('error_password'); ?>" class="password span3" required />
+							<?php if ($error_password) { ?>
+								<span class="error"><?php echo $error_password; ?></span>
+							<?php } ?>
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label" for="confirm">
+							<span class="req_mark">*</span> <?php echo $entry_confirm; ?>
+						</label>
+						<div class="controls">
+							<input type="password" name="confirm" id="confirm" value="<?php echo $confirm; ?>"  title="<?php echo $this->language->get('error_password'); ?>" class="password span3" required />
+							<?php if ($error_confirm) { ?>
+								<span class="error"><?php echo $error_confirm; ?></span>
+							<?php } ?>
 						</div>
 					</div>
 
 				</fieldset>
 
-				<fieldset class="subheading">
+				<!-- <fieldset class="subheading">
 
-					<legend><?php echo $text_your_address; ?></legend>
+					<legend class="hide"><?php echo $text_your_address; ?></legend>
 
 					<div class="control-group">
 						<label class="control-label" for="company"><?php echo $entry_company; ?></label>
@@ -200,11 +225,11 @@
 						</div>
 					</div>
 
-				</fieldset>
+				</fieldset> -->
 
-				<fieldset class="subheading">
+				<!-- <fieldset class="subheading">
 
-					<legend><?php echo $text_your_password; ?></legend>
+					<legend class="hide"><?php echo $text_your_password; ?></legend>
 
 					<div class="control-group">
 						<label class="control-label" for="password">
@@ -230,9 +255,9 @@
 						</div>
 					</div>
 
-				</fieldset>
+				</fieldset> -->
 
-				<fieldset class="subheading">
+				<!-- <fieldset class="subheading">
 
 					<legend><?php echo $text_newsletter; ?></legend>
 
@@ -249,7 +274,7 @@
 						</div>
 					</div>
 
-				</fieldset>
+				</fieldset> -->
 
 				<div class="form-actions">
 						
@@ -264,9 +289,13 @@
 				</div>
 				
 			</form>
-
+				</div>
+			</div>	
 		</section> <!-- #maincontent -->
 
+		<section class="span3">
+			<p><?php echo $text_account_already; ?></p>
+		</section>
 		<?php echo $column_right; ?>
 
 	</div> <!-- .row -->
