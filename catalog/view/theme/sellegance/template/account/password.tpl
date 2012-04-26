@@ -11,8 +11,8 @@
 		<?php } ?>
 	</div>
   
-	<header class="heading">
-		<h1><?php echo $heading_title; ?></h1>
+	<header>
+		
 	</header>
 
 	<?php 
@@ -27,8 +27,12 @@
 		<?php echo $column_left; ?>
 
 		<section id="maincontent" class="<?php echo $main; ?>" role="main">
-
-			<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="password-form" class="form-horizontal">
+			<div class="mod">
+				<div class="mod-hd">
+					<h4><?php echo $heading_title; ?></h4>
+				</div>
+				<div class="mod-bd">
+					<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="password-form" class="form-horizontal">
 	  
 				<fieldset class="subheading ">
 					
@@ -66,6 +70,9 @@
 				</div>
 		
 			</form>
+				</div>
+			</div>
+			
 		
 		</section> <!-- #maincontent -->
 

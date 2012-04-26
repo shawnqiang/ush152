@@ -11,8 +11,8 @@
 		<?php } ?>
 	</div>
 	
-	<header class="heading">
-		<h1><?php echo $heading_title; ?></h1>
+	<header>
+		
 	</header>
 
 	<?php 
@@ -27,8 +27,12 @@
 		<?php echo $column_left ?>
 
 		<section id="maincontent" class="<?php echo $main; ?>" role="main">
-
-			<?php if ($returns) { ?>
+			<div class="mod">
+				<div class="mod-hd">
+					<h4><?php echo $heading_title; ?></h4>
+				</div>
+				<div class="mod-bd">
+								<?php if ($returns) { ?>
 
 				<div class="return-list">
 
@@ -84,6 +88,9 @@
 				</div>
 
 			<?php } ?>
+				</div>
+			</div>
+
 
 		</section> <!-- #maincontent -->
 

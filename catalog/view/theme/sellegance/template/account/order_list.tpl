@@ -11,8 +11,8 @@
 		<?php } ?>
 	</div>
 	
-	<header class="heading">
-		<h1><?php echo $heading_title; ?></h1>
+	<header>
+		
 	</header>
 
 	<?php 
@@ -25,10 +25,14 @@
 	<div class="row">
 
 		<?php echo $column_left; ?>
-
+		
 		<section id="maincontent" class="<?php echo $main; ?>" role="main">
-
-			<?php if ($orders) { ?>
+			<div class="mod">
+				<div class="mod-hd">
+					<h4><?php echo $heading_title; ?></h4>
+				</div>
+				<div class="mod-bd">
+					<?php if ($orders) { ?>
 
 			<div id="order-list">
 				
@@ -77,6 +81,10 @@
 			<div class="form-actions">
 				<a href="<?php echo $continue; ?>" class="btn btn-inverse"><?php echo $button_continue; ?></a>
 			</div>
+
+				</div>
+			</div>
+			
 
 		</section> <!-- #maincontent -->
 

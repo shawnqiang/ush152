@@ -11,9 +11,9 @@
 		<?php } ?>
 	</div>
 	
-	<header class="heading">
+	<header>
 
-		<h1><?php echo $heading_title; ?></h1>
+		
 
 		<div id="notification"></div>
 
@@ -31,8 +31,12 @@
 		<?php echo $column_left;?>
 
 		<section id="maincontent" class="<?php echo $main; ?>" role="main">
-
-			<?php if ($products) { ?>
+			<div class="mod">
+				<div class="mod-hd">
+					<h4><?php echo $heading_title; ?></h4>
+				</div>
+				<div class="mod-bd">
+								<?php if ($products) { ?>
 
 				<div id="wish-list">
 
@@ -90,12 +94,16 @@
 
 				<div class="content empty">
 					<p><?php echo $text_empty; ?></p>
-					<div class="form-actions">
+					<div class="">
 						<a href="<?php echo $continue; ?>" class="btn btn-inverse"><?php echo $button_continue; ?></a>
 					</div>
 				</div>
 
 			<?php } ?>
+
+				</div>
+			</div>
+
 
 		</section> <!-- #maincontent -->
 

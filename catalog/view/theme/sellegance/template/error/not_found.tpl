@@ -11,8 +11,8 @@
 		<?php } ?>
 	</div>
 	 
-	 <header class="heading">
-		<h1><?php echo $heading_title; ?></h1>
+	<header>
+		
 	</header>
 
 	<?php 
@@ -27,7 +27,7 @@
 		<?php echo $column_left; ?>
 
 		<section id="maincontent" class="<?php echo $main; ?>" role="main" >
-
+			<h1><?php echo $heading_title; ?></h1>
 			<div class="empty">
 				
 				<p><?php echo $text_error; ?></p>

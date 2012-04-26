@@ -11,9 +11,9 @@
 		<?php } ?>
 	</div>
   
-	<header class="heading">
+	<header>
 		
-		<h1><?php echo $heading_title; ?></h1>
+		
 
 		<?php if ($error_warning) { ?>
 			<div class="alert warning"><?php echo $error_warning; ?></div>
@@ -33,8 +33,12 @@
 		<?php echo $column_left; ?>
 
 		<section id="maincontent" class="<?php echo $main; ?>" role="main">
-
-			<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="edit-account" class="form-horizontal">
+			<div class="mod">
+				<div class="mod-hd">
+					<h4><?php echo $heading_title; ?></h4>	
+				</div>
+				<div class="mod-bd">
+					<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="edit-account" class="form-horizontal">
 		
 				<fieldset class="subheading">
 
@@ -95,7 +99,10 @@
 					<input type="submit" value="<?php echo $button_continue; ?>" class="btn btn-inverse" />
 				</div>
 	  
-			</form>
+			</form>	
+				</div>
+			</div>
+			
 
 		</section> <!-- #maincontent -->
 

@@ -11,8 +11,8 @@
 		<?php } ?>
 	</div>
 	
-	<header class="heading">
-		<h1><?php echo $heading_title; ?></h1>
+	<header>
+		
 	</header>
 
 	<?php 
@@ -27,8 +27,12 @@
 		<?php echo $column_left ?>
 		
 		<section id="maincontent" class="<?php echo $main; ?>" role="main">
-
-			<div id="download-list">
+			<div class="mod">
+				<div class="mod-hd">
+					<h4><?php echo $heading_title; ?></h4>
+				</div>
+				<div class="mod-bd">
+								<div id="download-list">
 
 			<?php foreach ($downloads as $download) { ?>
 
@@ -76,6 +80,9 @@
 				</a>
 
 			</div>
+				</div>
+			</div>
+
 
 		</section> <!-- #maincontent -->
 

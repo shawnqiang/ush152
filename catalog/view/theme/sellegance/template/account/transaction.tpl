@@ -11,8 +11,8 @@
 		<?php } ?>
 	</div>
 
-	<header class="heading">
-		<h1><?php echo $heading_title; ?></h1>
+	<header>
+		
 	</header>
 
 	<?php 
@@ -27,39 +27,46 @@
 		<?php echo $column_left; ?>
 
 		<section id="maincontent" class="<?php echo $main; ?>" role="main">
+			<div class="mod">
+				<div class="mod-hd">
+					<h4><?php echo $heading_title; ?></h4>
+				</div>
+				<div class="mod-bd">
+						<p><?php echo $text_total; ?><b> <?php echo $total; ?></b>.</p>
 
-			<p><?php echo $text_total; ?><b> <?php echo $total; ?></b>.</p>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<td class="left"><?php echo $column_date_added; ?></td>
+									<td class="left"><?php echo $column_description; ?></td>
+									<td class="right"><?php echo $column_amount; ?></td>
+								</tr>
+							</thead>
+							<tbody>
+								<?php if ($transactions) { ?>
+								<?php foreach ($transactions  as $transaction) { ?>
+								<tr>
+									<td class="left"><?php echo $transaction['date_added']; ?></td>
+									<td class="left"><?php echo $transaction['description']; ?></td>
+									<td class="right"><?php echo $transaction['amount']; ?></td>
+								</tr>
+								<?php } ?>
+								<?php } else { ?>
+								<tr>
+									<td class="center" colspan="3"><?php echo $text_empty; ?></td>
+								</tr>
+								<?php } ?>
+							</tbody>
+						</table>
+						
+						<div class="paginate"><?php echo $pagination; ?></div>
 
-			<table class="table table-bordered">
-				<thead>
-					<tr>
-						<td class="left"><?php echo $column_date_added; ?></td>
-						<td class="left"><?php echo $column_description; ?></td>
-						<td class="right"><?php echo $column_amount; ?></td>
-					</tr>
-				</thead>
-				<tbody>
-					<?php if ($transactions) { ?>
-					<?php foreach ($transactions  as $transaction) { ?>
-					<tr>
-						<td class="left"><?php echo $transaction['date_added']; ?></td>
-						<td class="left"><?php echo $transaction['description']; ?></td>
-						<td class="right"><?php echo $transaction['amount']; ?></td>
-					</tr>
-					<?php } ?>
-					<?php } else { ?>
-					<tr>
-						<td class="center" colspan="3"><?php echo $text_empty; ?></td>
-					</tr>
-					<?php } ?>
-				</tbody>
-			</table>
-			
-			<div class="paginate"><?php echo $pagination; ?></div>
-
-			<div class="form-actions">
-				<a href="<?php echo $continue; ?>" class="btn"><?php echo $button_continue; ?></a>
+						<div class="form-actions">
+							<a href="<?php echo $continue; ?>" class="btn"><?php echo $button_continue; ?></a>
+						</div>
+				</div>
 			</div>
+
 		
 		</section> <!-- #maincontent -->
 

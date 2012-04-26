@@ -11,8 +11,8 @@
 		<?php } ?>
 	</div>
 	
-	<header class="heading">
-		<h1><?php echo $heading_title; ?></h1>
+	<header>
+		
 	</header>
 
 	<?php 
@@ -27,30 +27,37 @@
 		<?php echo $column_left; ?>
 
 		<section id="maincontent" class="<?php echo $main; ?>" role="main">
-
-			<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="newsletter" class="form-horizontal">
-
-				<div class="control-group">
-					
-					<label class="control-label"><?php echo $entry_newsletter; ?></label>
-					
-					<div class="controls">
-						<?php if ($newsletter) { ?>
-							<label class="radio inline"><input type="radio" name="newsletter" value="1" checked="checked" /><?php echo $text_yes; ?></label>
-							<label class="radio inline"><input type="radio" name="newsletter" value="0" /><?php echo $text_no; ?></label>
-						<?php } else { ?>
-							<label class="radio inline"><input type="radio" name="newsletter" value="1" /><?php echo $text_yes; ?></label>
-							<label class="radio inline"><input type="radio" name="newsletter" value="0" checked="checked" /><?php echo $text_no; ?></label>
-						<?php } ?>
-					</div>
+			<div class="mod">
+				<div class="mod-hd">
+					<h4><?php echo $heading_title; ?></h4>
 				</div>
-				
-				<div class="form-actions">
-					<a href="<?php echo $back; ?>" class="btn"><?php echo $button_back; ?></a>
-					<input type="submit" value="<?php echo $button_continue; ?>" class="btn btn-inverse" />
-				</div>
+				<div class="mod-bd">
+					<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="newsletter" class="form-horizontal">
 
-			</form>
+						<div class="control-group">
+							
+							<label class="control-label"><?php echo $entry_newsletter; ?></label>
+							
+							<div class="controls">
+								<?php if ($newsletter) { ?>
+									<label class="radio inline"><input type="radio" name="newsletter" value="1" checked="checked" /><?php echo $text_yes; ?></label>
+									<label class="radio inline"><input type="radio" name="newsletter" value="0" /><?php echo $text_no; ?></label>
+								<?php } else { ?>
+									<label class="radio inline"><input type="radio" name="newsletter" value="1" /><?php echo $text_yes; ?></label>
+									<label class="radio inline"><input type="radio" name="newsletter" value="0" checked="checked" /><?php echo $text_no; ?></label>
+								<?php } ?>
+							</div>
+						</div>
+						
+						<div class="form-actions">
+							<a href="<?php echo $back; ?>" class="btn"><?php echo $button_back; ?></a>
+							<input type="submit" value="<?php echo $button_continue; ?>" class="btn btn-inverse" />
+						</div>
+
+					</form>
+				</div>
+			</div>
+			
 
 		</section>
 

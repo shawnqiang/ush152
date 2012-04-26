@@ -57,6 +57,7 @@ body{
 /* -------------------------------------------------- */
 	.widgetbox, .mod{
 		border:1px solid #efefef;
+		margin-bottom:18px;
 
 	}
 
