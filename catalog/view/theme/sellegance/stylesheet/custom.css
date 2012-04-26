@@ -37,6 +37,21 @@ body{
 			padding: 0 0;
 		}
 
+
+	/*	Sidebars
+	-------------------------------------------------- */
+
+		#column-left > .inner {	
+			border-right: none; 
+			padding-right:0; 
+		}
+
+
+		#column-right > .inner { 
+			border-left:1px solid #CCC; 
+			padding-left:10px; 
+		}
+
 /* -------------------------------------------------- */
 /*	Mod style
 /* -------------------------------------------------- */
@@ -159,6 +174,34 @@ body{
 /* -------------------------------------------------- */
 /*	Content Wrapper
 /* -------------------------------------------------- */
+	
+	/*	Box
+	-------------------------------------------------- */
+
+		.box { 
+			margin-bottom: 20px;
+			border:1px solid #ddd;
+	 	}
+
+			.box .box-heading {
+				padding: 8px 10px 7px 4px;
+				font-size: 14px;
+				font-weight: bold;
+				text-transform:uppercase;
+				background-color: #ddd;
+				line-height: 14px;
+				color: #333;
+				margin-bottom:6px;
+			}
+
+	/*	Category boxes
+	-------------------------------------------------- */
+
+		.box-category { 
+			margin-top: 0; 
+			padding:0 5px 10px;
+		}
+
 
 
 /* -------------------------------------------------- */
