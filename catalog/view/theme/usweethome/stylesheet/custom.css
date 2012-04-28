@@ -1,0 +1,321 @@
+/*
+Usweethome custom styles.
+Theme Name: usweethome
+Version: 1.0
+Description: Responsive and clean template for OpenCart
+Theme URI: http://www.usweethome.com/
+Author: Shawn qiang
+Tags: usweethome, opencart, everthemes
+*/
+
+/* ---------------------------------------------------------------------- */
+/*	General Styles
+/* ---------------------------------------------------------------------- */
+body{
+	font-family:Georgia,serifd;
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Layout
+/* ---------------------------------------------------------------------- */
+	/*	Main container with shadows
+	-------------------------------------------------- */
+
+		#content-wrapper { 
+			border:none;
+		}
+	/* thick black line below main menu */ 
+
+		#topdivider { 
+			display: none;
+		} 
+
+	/*	Main content
+	-------------------------------------------------- */
+
+		#maincontent { 
+			padding: 0 0;
+		}
+
+
+	/*	Sidebars
+	-------------------------------------------------- */
+
+		#column-left > .inner {	
+			border-right: none; 
+			padding-right:0; 
+		}
+
+
+		#column-right > .inner { 
+			border-left:1px solid #CCC; 
+			padding-left:10px; 
+		}
+
+/* -------------------------------------------------- */
+/*	Mod style
+/* -------------------------------------------------- */
+	.widgetbox, .mod{
+		border:1px solid #efefef;
+		margin-bottom:18px;
+
+	}
+
+	.widgetbox-hd, .mod-hd{
+		padding: 10px;
+		background-color:#f7f7f7;
+	}
+		.widgetbox-hd p, .mod-hd p{
+			margin-bottom:0;
+		}
+	.widgetbox-bd, .mod-bd{
+		padding:10px;
+	}
+
+
+
+/* ---------------------------------------------------------------------- */
+/*	Header
+/* ---------------------------------------------------------------------- */
+
+#header{
+	position: relative; 
+	z-index: 99999; 
+	margin-bottom: 18px;
+	background-color: rgba(250, 250, 250, 1);
+	
+	background-image:url(../images/ush-bgs/header_bg.png);
+	background-repeat:repeat-x;
+	background-position:left bottom;
+}
+	#header .container{
+		width:940px;
+	}
+	
+	#header .accountwrapper{
+		position: relative;
+	}
+
+	#logo{
+		padding-top:14px;
+	}
+
+	/*	Welcome & Important Links
+	-------------------------------------------------- */
+
+	#welcome{
+		margin-top:28px;
+	}
+
+	/*	Search box
+	-------------------------------------------------- */
+
+	#search{
+		margin-top:20px;
+	}
+
+	/*	Mini Cart (module on the header)
+	-------------------------------------------------- */
+	#cart{
+		top:16px;
+	}
+
+	#cart h4{
+		display: inline;
+	}
+
+	#cart .heading{
+		margin:0;
+		top:0;
+		height:auto;
+	}
+
+	
+	/*	Main Navigation
+	-------------------------------------------------- */
+
+	#mainnav{
+		margin-top:10px;
+		background-color:#d21241;
+	}
+		.navbar-inner{
+			padding-left:20px;
+			padding-right:20px;
+			background-color:#703c2f;
+			-webkit-border-radius:4px;
+			-moz-border-radius:4px;
+			border-radius:4px;
+			-webkit-box-shadow:0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+			-moz-box-shadow:0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+			box-shadow:0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+		}
+	#mainnav .nav > li > a{
+		font-size:14px;
+		padding:6px 6px;
+		line-height:18px;
+		color:#fff;
+		text-transform:uppercase;
+		border:1px solid #703c2f;
+		border-bottom:none;
+	}
+
+	#mainnav .nav > li > a:hover, #mainnav .nav > li > a.active{
+		background-color:#fff;
+		color:#333;
+		border-style:solid;
+		border-width:1px;
+		border-color:rgba(0, 0, 0, 0.2);
+		border-bottom:none;
+	}
+
+	#mainnav .dropdown-menu{
+		border-radius:0;
+		border-top:none;
+	}
+
+	#mainnav .dropdown-menu li > a:hover, #mainnav .dropdown-menu .active > a, #mainnav .dropdown-menu .active > a:hover{
+		color:#d21241;
+		background-color:#fff;
+	}
+
+
+/* -------------------------------------------------- */
+/*	Content Wrapper
+/* -------------------------------------------------- */
+	
+	/*	Box
+	-------------------------------------------------- */
+
+		.box { 
+			margin-bottom: 18px;
+			border:1px solid #efefef;
+	 	}
+
+			.box .box-heading {
+				padding: 10px 10px 10px 4px;
+				font-size: 14px;
+				font-weight: bold;
+				text-transform:uppercase;
+				background-color: #f7f7f7;
+				line-height: 14px;
+				color: #333;
+
+			}
+
+	/*	Category boxes
+	-------------------------------------------------- */
+
+		.box-category { 
+			margin-top: 0; 
+			padding:0 5px;
+		}
+
+
+
+/* -------------------------------------------------- */
+/*	Mods Styles
+/* -------------------------------------------------- */
+	.category-mod .box-category > ul > li{
+		padding:7px 0;
+		border-bottom:1px solid #f7f7f7;
+	}
+
+	.category-mod .box-heading{
+		margin-bottom:0px;
+	}
+
+
+/* -------------------------------------------------- */
+/*	Products Category Views
+/* -------------------------------------------------- */
+
+	/*	Normal Category Page
+	-------------------------------------------------- */
+	.categorywrapper .breadcrumb{
+		margin-bottom:0px;
+	}
+
+	.categorywrapper .heading h1{
+		font-size:18px;
+		margin:0;
+		line-height:24px;
+		text-align:left;
+		padding-left:6px;
+	}
+
+
+/* -------------------------------------------------- */
+/*	Login Page
+/* -------------------------------------------------- */
+
+	.forgotten_tip{
+		margin-left:160px;
+	}
+
+
+/* -------------------------------------------------- */
+/*	Shopping Cart
+/* -------------------------------------------------- */
+	#cart-info { 
+		margin-top:0; 
+		margin-bottom: 18px; 
+	}	
+
+	#cart-info .mod-bd{
+		padding:0;
+	}
+
+		#cart-contents .row-fluid + .row-fluid {
+			border-bottom: none;
+			border-top: 1px solid #eee;
+			padding: 12px 0;
+			margin:0;
+		}
+
+/* -------------------------------------------------- */
+/*	Checkout
+/* -------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------------- */
+/*	Footer
+/* ---------------------------------------------------------------------- */
+	#footer{
+		border-top:6px solid #f2f1ef;
+		background-color:#f9f7f3;
+		padding: 10px;
+	}
+
+	#footend{
+		background-color:#f9f7f3;
+		margin-top:0px;
+		border-top:none;
+	}
+
+		#footend .container{
+			border-top:1px solid #f2f1ef;
+			padding-top:10px; 
+		}
+
+/* ---------------------------------------------------------------------- */
+/*	Media Queries
+/* ---------------------------------------------------------------------- */
+
+	/* Desktop standard 960 and up */
+	@media only screen and (min-width: 980px) {
+
+		/* -------------------------------------------------- */
+		/*	Header
+		/* -------------------------------------------------- */
+
+			.leftbox {margin-left:-620px;}
+
+			#maincontent.span12 .flexslider {
+				margin-left: 0;
+				width: 940px;
+
+			}
+
+			#footer ul.content { display: block !important; }
+
+	}
