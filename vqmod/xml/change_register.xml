@@ -1,0 +1,57 @@
+<modification>
+	<id>Change the register modle for simple purpose.</id>
+	<version>1.0</version>
+	<vqmver>1.0.8</vqmver>
+	<author>shawnqiang</author>
+	<file name="catalog/model/account/customer.php">
+		<operation>
+			<search position="before"><![CDATA[$this->db->query("INSERT INTO " . DB_PREFIX . "address SET customer_id = '" . (int)$customer_id . "']]></search>
+			<add><![CDATA[/*]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$address_id = $this->db->getLastId();]]></search>
+			<add><![CDATA[*/]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[$this->db->query("UPDATE " . DB_PREFIX . "customer SET address_id = '"]]></search>
+			<add><![CDATA[$address_id = 0; ]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/account/register.php">
+		<operation>
+			<search position="before"><![CDATA[$this->data['entry_fax'] = $this->language->get('entry_fax');]]></search>
+			<add><![CDATA[/*]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$this->data['entry_zone'] = $this->language->get('entry_zone');]]></search>
+			<add><![CDATA[*/]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[if (isset($this->error['address_1'])) {]]></search>
+			<add><![CDATA[/*]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[$this->data['action'] = $this->url->link('account/register', '', 'SSL');]]></search>
+			<add><![CDATA[*/]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[if (isset($this->request->post['fax'])) {]]></search>
+			<add><![CDATA[/*]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[if (isset($this->request->post['password']))]]></search>
+			<add><![CDATA[*/]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[if ((utf8_strlen($this->request->post['address_1']) < 3) || (utf8_strlen($this->request->post['address_1']) > 128))]]></search>
+			<add><![CDATA[/*]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[if ((utf8_strlen($this->request->post['password']) < 4) || (utf8_strlen($this->request->post['password']) > 20))]]></search>
+			<add><![CDATA[*/]]></add>
+		</operation>
+	</file>
+
+
+</modification>

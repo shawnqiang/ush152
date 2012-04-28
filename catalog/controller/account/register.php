@@ -58,7 +58,6 @@ class ControllerAccountRegister extends Controller {
     	$this->data['entry_lastname'] = $this->language->get('entry_lastname');
     	$this->data['entry_email'] = $this->language->get('entry_email');
     	$this->data['entry_telephone'] = $this->language->get('entry_telephone');
-		/** Modified by manlianxiao3@126.com 
 		$this->data['entry_fax'] = $this->language->get('entry_fax');
     	$this->data['entry_company'] = $this->language->get('entry_company');
     	$this->data['entry_address_1'] = $this->language->get('entry_address_1');
@@ -67,7 +66,6 @@ class ControllerAccountRegister extends Controller {
     	$this->data['entry_city'] = $this->language->get('entry_city');
     	$this->data['entry_country'] = $this->language->get('entry_country');
     	$this->data['entry_zone'] = $this->language->get('entry_zone');
-		*/
 		$this->data['entry_newsletter'] = $this->language->get('entry_newsletter');
     	$this->data['entry_password'] = $this->language->get('entry_password');
     	$this->data['entry_confirm'] = $this->language->get('entry_confirm');
@@ -116,7 +114,7 @@ class ControllerAccountRegister extends Controller {
 			$this->data['error_confirm'] = '';
 		}
 
-		/** Modified by manlianxiao3@126.com
+		
   		if (isset($this->error['address_1'])) {
 			$this->data['error_address_1'] = $this->error['address_1'];
 		} else {
@@ -146,7 +144,7 @@ class ControllerAccountRegister extends Controller {
 		} else {
 			$this->data['error_zone'] = '';
 		}
-		*/
+	
 		
     	$this->data['action'] = $this->url->link('account/register', '', 'SSL');
 
@@ -174,7 +172,7 @@ class ControllerAccountRegister extends Controller {
 			$this->data['telephone'] = '';
 		}
 
-		/** Modified by manlianxiao3@126.com
+
 		if (isset($this->request->post['fax'])) {
     		$this->data['fax'] = $this->request->post['fax'];
 		} else {
@@ -226,7 +224,7 @@ class ControllerAccountRegister extends Controller {
 		$this->load->model('localisation/country');
 		
     	$this->data['countries'] = $this->model_localisation_country->getCountries();
-		*/
+	
 
 		if (isset($this->request->post['password'])) {
     		$this->data['password'] = $this->request->post['password'];
@@ -305,7 +303,7 @@ class ControllerAccountRegister extends Controller {
       		$this->error['telephone'] = $this->language->get('error_telephone');
     	}
 
-		/** Modified by manlianxiao3@126.com
+
     	if ((utf8_strlen($this->request->post['address_1']) < 3) || (utf8_strlen($this->request->post['address_1']) > 128)) {
       		$this->error['address_1'] = $this->language->get('error_address_1');
     	}
@@ -329,7 +327,7 @@ class ControllerAccountRegister extends Controller {
     	if ($this->request->post['zone_id'] == '') {
       		$this->error['zone'] = $this->language->get('error_zone');
     	}
-		*/
+
 
     	if ((utf8_strlen($this->request->post['password']) < 4) || (utf8_strlen($this->request->post['password']) > 20)) {
       		$this->error['password'] = $this->language->get('error_password');

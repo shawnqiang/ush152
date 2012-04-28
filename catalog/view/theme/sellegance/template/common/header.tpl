@@ -341,6 +341,8 @@
 
 		</div> <!-- .row -->
 
+	
+	</div>
 	<?php if ($categories) { ?>
 		
 		<nav id="mainnav" class="navbar" role="navigation">
@@ -379,7 +381,6 @@
 		</nav><!-- #navbar -->
 
 	<?php } ?>
-	</div>
 </header> <!-- #header -->
 
 <div id="topdivider" class="container"></div>
