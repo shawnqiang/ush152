@@ -1,0 +1,110 @@
+<modification>
+	<id>Add price filter interval for frontend by autocompute all products price</id>
+	<version>1.0</version>
+	<vqmver>1.0.8</vqmver>
+	<author>suofiya</author>
+	
+	<file name="catalog/controller/product/category.php">
+		<operation>
+			<search position="before"><![CDATA[
+					$this->data['breadcrumbs'] = array();
+				]]>
+			</search>
+			<add><![CDATA[
+					//process price filter parameter in url
+					if (isset($this->request->get['min_price'])) {
+						$min_price = $this->request->get['min_price'];
+					} else {
+						$min_price = '';
+					}
+					
+					if (isset($this->request->get['max_price'])) {
+						$max_price = $this->request->get['max_price'];
+					} else {
+						$max_price = '';
+					}
+				]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search position="before"><![CDATA[
+					$this->data['categories'] = array();
+				]]>
+			</search>
+			<add><![CDATA[
+					//Add price filter to url
+					if (isset($this->request->get['min_price'])) {
+						$url .= '&min_price=' . $this->request->get['min_price'];
+					}
+					if (isset($this->request->get['max_price'])) {
+						$url .= '&max_price=' . $this->request->get['max_price'];
+					}
+				]]>
+			</add>
+		</operation>
+		
+		<operation>
+			<search position="before"><![CDATA[
+					$product_total = $this->model_catalog_product->getTotalProducts($data);	
+				]]>
+			</search>
+			<add><![CDATA[
+					//Add price filter to data
+					$data['min_price'] = $min_price;
+					$data['max_price'] = $max_price;
+				]]>
+			</add>
+		</operation>
+		
+		<operation>
+			<search position="before"><![CDATA[
+					$pagination = new Pagination();
+				]]>
+			</search>
+			<add><![CDATA[
+					//Add price filter to url
+					if (isset($this->request->get['min_price'])) {
+						$url .= '&min_price=' . $this->request->get['min_price'];
+					}
+					if (isset($this->request->get['max_price'])) {
+						$url .= '&max_price=' . $this->request->get['max_price'];
+					}
+				]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search position="after"><![CDATA[
+					$this->data['limit'] = $limit;
+				]]>
+			</search>
+			<add><![CDATA[
+					//Add price filter for render
+					$this->data['min_price'] = $min_price;
+					$this->data['max_price'] = $max_price;
+				]]>
+			</add>
+		</operation>
+	</file>
+
+	<file name="catalog/model/catalog/product.php">
+		<operation>
+			<search position="before"><![CDATA[
+					if (!empty($data['filter_manufacturer_id'])) {
+				]]>
+			</search>
+			<add><![CDATA[
+					//Add price filter to sql
+					if (!empty($data['min_price'])) { 
+						$sql .= " AND p.price >='" . (float)$data['min_price'] . "'";
+					}
+					if (!empty($data['max_price'])) { 
+						$sql .= " AND p.price <='" . (float)$data['max_price'] . "'";
+					}
+				]]>
+			</add>
+		</operation>
+	</file>
+</modification>
+
